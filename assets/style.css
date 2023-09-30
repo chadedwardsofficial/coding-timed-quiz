@@ -1,37 +1,60 @@
 body {
+  background-color: black;
+  color: white;
   font-family: Arial, sans-serif;
-  text-align: center;
-}
-
-.header {
-  padding: 20px;
-}
-
-.question {
-  font-size: 2em;
-  margin: 20px 0;
-}
-
-.options {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
+  height: 100vh;
+  margin: 0;
 }
 
-.card {
-  border-radius: 15px;
-  border: 2px solid #333;
-  background-color: #dea1fa;
+h1 {
+  font-size: 48px;
+}
+
+a {
+  font-size: 24px;
   margin: 10px;
-  padding: 20px;
-  width: 200px;
-  text-align: center;
-  box-shadow: 5px 5px 5px #4e2263
+  padding: 10px 20px;
+  background-color: #333;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: none;
 }
 
-.card:hover {
-  cursor: pointer;
-  background-color: #9c47ad;
+.button-container {
+  display: flex;
 }
+a:hover {
+  background-color: #555;
+  box-shadow: 5px 5px 20px 2px #af3aaf
+}
+
+
+ .optionsContainer button {
+    width: 200px;
+    height: 50px;
+    margin:5px;
+    border-radius: 10px;
+    transition-duration: 0.4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+  }
+  
+  .optionsContainer button:hover {
+    background-color: #e4afe6; 
+    color: white;
+    cursor: pointer;
+    box-shadow: 2px 5px 20px #d497d4;
+    width: 200px;
+    height:100px;
+    
+  }
