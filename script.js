@@ -9,50 +9,59 @@ var time = 100;
 var questions = [
 
   {
-    Question: "Question1",
+    Question: "What does HTML stand for?",
     Option: [
-      "Option1",
-      "Option2",
-      "Option3",
-      "Option4"
+      "Hippos That Might Lie",
+      "Helium Thyme Magnesium Lint",
+      "Hyper Markup Text Language",
+      "Happening That May Lamp"
     ],
-    Result: "Option3"
+    Result: "Hyper Markup Text Language"
 
 
   },
   {
-    Question: "Question2",
+    Question: "What does the <a> tag stand for?",
     Option: [
-      "Option1",
-      "Option2",
-      "Option3",
-      "Option4"
+      "Paragraph Tag",
+      "Header Tag",
+      "Anchor Tag",
+      "Footer Tag"
     ],
-    Result: "Option3"
+    Result: "Anchor Tag"
 
   },
   {
-    Question: "Question3",
+    Question: "In CSS what does a # selector stand for?",
     Option: [
-      "Option1",
-      "Option2",
-      "Option3",
-      "Option4"
+      "ID",
+      "Value",
+      "Class",
+      "Src"
     ],
-    Result: "Option2"
+    Result: "ID"
 
   },
   {
-    Question: "Question4",
+    Question: "What does mkdir mean in Git Bash",
     Option: [
-      "Option1",
-      "Option2",
-      "Option3",
-      "Option4"
+      "Open a file",
+      "Create a Folder/Directory",
+      "Push commits",
+      "Adds comments"
     ],
-    Result: "Option1"
+    Result: "Create a Folder/Directory"
   },
-
+  {
+    Question: "What syntax do you use to select an element by it's ID, in javascript",
+    Option: [
+      "var document.getElementbyID()",
+      "var document.queryselector()",
+      "var function()",
+      "document.textcontent = ''"
+    ],
+    Result: "var document.getElementbyID()"
+  },
 
 
 
@@ -95,7 +104,8 @@ else {
   time -= 9;
   
 }
-if (time <= 0 || currentQuestion === questions.length){
+if (time === 0 || currentQuestion === questions.length){
+
 endGame();
 }
 showQuestion();
