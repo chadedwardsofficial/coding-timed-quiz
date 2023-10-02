@@ -72,49 +72,61 @@ var timerCount = setInterval(function () {
   time--;
   displayTimer.textContent = time;
 
-  if (timeLeft === 0) {
+  if (time <= 0) {
     clearInterval(timerCount);
+    
   }
 }, 1000);
 
 
 
 
-
-// function endGame(){
-// clearInterval(timerCount)
-
-// }
-
-
-
-function checkAnswer(){
-
-if (this.dataset.value === questions[currentQuestion].Result){
-  currentQuestion++;
-
+function endGame() {
+  clearInterval(timerCount);
+  question.textContent = "End Game!";
+  options.textContent = '';
   
-  
+  var restartButton = document.createElement('button');
+  restartButton.textContent = "Restart";
+  restartButton.addEventListener("click", function() {
+    location.reload(); // Reload the page to start again
+  });
+  options.appendChild(restartButton);
+
+  var scoreboardButton = document.createElement('button');
+  scoreboardButton.textContent = "View Scoreboard";
+  scoreboardButton.addEventListener("click", function() {
+    window.location.href = "scoreboard.html"; // Redirect to scoreboard.html
+  });
+  options.appendChild(scoreboardButton);
+}
+
+
+function checkAnswer() {
+
+  if (this.dataset.value === questions[currentQuestion].Result) {
+    currentQuestion++;
+
+
+
+    showQuestion();
+
+
+
+  }
+  else {
+    time -= 9;
+
+  }
+  if (time === 0 || currentQuestion === questions.length) {
+  }
   showQuestion();
 
-
-
-}
-else {
-  time -= 9;
-  
-}
-if (time === 0 || currentQuestion === questions.length){
-
-endGame();
-}
-showQuestion();
-
 };
-  
+
 function showQuestion() {
   question.textContent = questions[currentQuestion].Question;
-  options.textContent='';
+  options.textContent = '';
   for (i = 0; i < questions[currentQuestion].Option.length; i++) {
     var button = document.createElement('button');
     button.setAttribute("data-value", questions[currentQuestion].Option[i])
@@ -123,7 +135,11 @@ function showQuestion() {
     options.appendChild(button);
 
   }
-
+   if (time <= 0) {
+  clearInterval(timerCount);
+  endGame();
+  
+}
 
 
 }
