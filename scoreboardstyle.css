@@ -1,0 +1,41 @@
+body {
+background-color: black;
+color: white;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+}
+a {
+  font-size: 16px;
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  border: none;
+  color: black;
+  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+form{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+
+.scorelist {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.scorelist li {
+ margin-right: 30px;
+
+}

@@ -106,22 +106,18 @@ function checkAnswer() {
 
   if (this.dataset.value === questions[currentQuestion].Result) {
     currentQuestion++;
-
-
-
-    showQuestion();
-
-
-
-  }
-  else {
+    if (currentQuestion === questions.length) {
+      endGame(); 
+    } else {
+      showQuestion(); // Show next question
+    }
+  } else {
     time -= 9;
-
   }
-  if (time === 0 || currentQuestion === questions.length) {
-  }
-  showQuestion();
 
+  if (time <= 0) {
+    endGame(); // Call endGame when time is up
+  }
 };
 
 function showQuestion() {

@@ -4,41 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>High Score Tracker</title>
-    <script>
-        function addScore() {
-            var name = document.getElementById('name').value;
-            var score = document.getElementById('score').value;
-
-            if (name && score) {
-                var list = document.getElementById('scoreList');
-                var listItem = document.createElement('li');
-                listItem.textContent = name + ': ' + score;
-                list.appendChild(listItem);
-
-                document.getElementById('name').value = '';
-                document.getElementById('score').value = '';
-
-                // Save data to local storage
-                var scores = JSON.parse(localStorage.getItem('scores')) || [];
-                scores.push({ name: name, score: score });
-                localStorage.setItem('scores', JSON.stringify(scores));
-            }
-        }
-
-        function loadScores() {
-            var scores = JSON.parse(localStorage.getItem('scores')) || [];
-            var list = document.getElementById('scoreList');
-
-            scores.forEach(function(item) {
-                var listItem = document.createElement('li');
-                listItem.textContent = item.name + ': ' + item.score;
-                list.appendChild(listItem);
-            });
-        }
-    </script>
+    <link rel="stylesheet" href="scoreboardstyle.css">
+   
 </head>
 <body onload="loadScores()">
-    <h1>High Score Tracker</h1>
+    <h1>Score Board!</h1>
     <form>
         <label for="name">Name:</label>
         <input type="text" id="name" required><br>
@@ -46,8 +16,15 @@
         <input type="number" id="score" required><br>
         <button type="button" onclick="addScore()">Submit</button>
     </form>
-
+    <a href="homepage.html">Homepage</a>
+    <div class="scorelist">
     <h2>Scores:</h2>
     <ul id="scoreList"></ul>
+    </div> 
+
+
+
+
+    <script src="scoreboardscript.js"></script>
 </body>
 </html>
