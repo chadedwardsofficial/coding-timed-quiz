@@ -89,14 +89,14 @@ function endGame() {
   var restartButton = document.createElement('button');
   restartButton.textContent = "Restart";
   restartButton.addEventListener("click", function() {
-    location.reload(); // Reload the page to start again
+    location.reload(); 
   });
   options.appendChild(restartButton);
 
   var scoreboardButton = document.createElement('button');
   scoreboardButton.textContent = "View Scoreboard";
   scoreboardButton.addEventListener("click", function() {
-    window.location.href = "scoreboard.html"; // Redirect to scoreboard.html
+    window.location.href = "scoreboard.html"; 
   });
   options.appendChild(scoreboardButton);
 }
