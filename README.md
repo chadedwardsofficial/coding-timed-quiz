@@ -16,10 +16,19 @@ The webpage also includes 2 javascript files, one for the logic of the quiz and 
 
 ## Screenshot(s) of Working Website:
 
+Homepage:
+![Alt text](image.png)
 
 
+QuizPage: 
+![Alt text](image-1.png)
+
+
+Scoreboard:
+![Alt text](image-2.png)
 
 ## Link to Deployed Website:
+https://chadedwardsofficial.github.io/coding-timed-quiz/index.html
 
 
 
